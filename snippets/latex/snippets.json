@@ -1,0 +1,122 @@
+{
+    "Math Template": {
+        "prefix": ["mtm"],
+        "body": [
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Define Article %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\documentclass[14pt]{extarticle}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Using Packages %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\usepackage{amssymb}",
+            "\\usepackage{amsmath}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% Title & Author %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "\\title{${1:Title}}",
+            "\\author{${2:Prokop Viktorin}}",
+            "%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%",
+            "",
+            "\\begin{document}",
+            "    $0",
+            "\\end{document}"
+        ],
+        "description": "Use the default template which includes a variety of packages and declared-commands. The template will also automatically generate the title and author, as well as date, and will formate the document."
+    },
+    "Large Summation": {
+        "prefix": ["dsum"],
+        "body": ["\\displaystyle\\sum_{$1}^{$2}$3"],
+        "description": "Insert a large summation notation."
+    },
+    "Inline Summation": {
+        "prefix": ["isum"],
+        "body": ["\\sum_{$1}^{$2}$3"],
+        "description": "Insert an inline summation notation, (only in the cases when the environment is inline math environment)."
+    },
+    "Inline Math": {
+        "prefix": ["mathinline"],
+        "body": ["$ $1 $$0"],
+        "description": "Insert inline Math Environment."
+    },
+    "Centered Math": {
+        "prefix": ["mathcentered"],
+        "body": ["$$ $0 $$"],
+        "description": "Insert centered Math Environment."
+    },
+    "Section": {
+        "prefix": ["sec"],
+        "body": ["\\section{$1}$0"],
+        "description": "Insert a new section."
+    },
+    "Subsection": {
+        "prefix": ["subsec"],
+        "body": ["\\subsection{$1}$0"],
+        "description": "Insert a new subsection."
+    },
+    "Header": {
+        "prefix": ["header"],
+        "body": "\\section*{$1}$0",
+        "description": "Insert a section without index."
+    },
+    "Italic Text": {
+        "prefix": ["italic"],
+        "body": "\\textit{$1}$0",
+        "description": "Insert italic text."
+    },
+    "Bold Text": {
+        "prefix": ["bold"],
+        "body": "\\textbf{$1}$0",
+        "description": "Insert bold text."
+    },
+    "Bold Italic Text": {
+        "prefix": ["bolditalic"],
+        "body": "\\textbf{\\textit{$1}}$0",
+        "description": "Insert bold italic text."
+    },
+    "Itemize": {
+        "prefix": ["- ", "\\itemize", "itemize"],
+        "body": ["\\begin{itemize}", "\t\\item $1", "\\end{itemize}$0"]
+    },
+    "Indent": {
+        "prefix": ["tab", "\\tab"],
+        "body": ["\\indent "],
+        "description": "The equivalent of \"\\t\", also known as \"Tab\""
+    },
+    "Large Integral": {
+        "prefix": ["dint"],
+        "body": ["\\displaystyle\\int_{$1}^{$2}$3"],
+        "description": "Insert large integral notation."
+    },
+    "Inline Integral": {
+        "prefix": ["iint"],
+        "body": ["\\int_{$1}^{$2}$3"],
+        "description": "Insert inline integral notation, (only in the cases when the environment is inline math environment)."
+    },
+    "Inline Fraction": {
+        "prefix": ["idiv"],
+        "body": ["\\frac{$1}{$2}$0"],
+        "description": [
+            "Insert inline fraction notation, (only in the cases when the environment is inline math environment)."
+        ]
+    },
+    "Large Fraction": {
+        "prefix": ["ddiv"],
+        "body": ["\\displaystyle\\frac{$1}{$2}$0"],
+        "description": ["Insert large fraction notation"]
+    },
+    "Begin Align": {
+        "prefix": ["bali"],
+        "body": [
+        "\\begin{align*}",
+        "\t $1",
+        "\\end{align*}"
+      ],
+      "description": ["Insert large fraction notation"]
+    },
+    "Begin Gather": {
+        "prefix": ["bgat"],
+        "body": [
+        "\\begin{gather*}",
+        "\t $1",
+        "\\end{gather*}"
+      ],
+      "description": ["Insert large fraction notation"]
+    }
+}

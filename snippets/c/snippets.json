@@ -1,0 +1,9 @@
+{
+    "malloc": {
+        "prefix": ["mal"],
+        "body": [
+        "$1 * $2 = ($1 *) malloc(sizeof($1));"
+      ],
+      "description": ["Malloc with cast"]
+    }
+}
