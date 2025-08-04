@@ -9,20 +9,20 @@ return {
     config = function()
       local snipe = require("snipe")
       require("snipe").setup()
-      snipe.default_fmt = function(item)
-        if item.classifiers:sub(5, 5) == "+" then
-          return item.name .. " [m]"
-        end
-        return item.name
-      end
+      -- snipe.default_fmt = function(item)
+      --   if item.classifiers:sub(5, 5) == "+" then
+      --     return item.name .. " [m]"
+      --   end
+      --   return item.name
+      -- end
     end,
     opts = {}
   },
-  {
-    'nvim-java/nvim-java',
-    config = false,
-  },
   { "nvim-neotest/nvim-nio" },
+  {
+    'jaytyrrell13/static.nvim',
+    opts = {},
+  },
   {
     'f3fora/nvim-texlabconfig',
     config = function()
@@ -40,8 +40,12 @@ return {
       require('local-highlight').setup()
     end,
   },
+  { "folke/snacks.nvim" },
   {
-    "kkoomen/vim-doge",
+    "danymat/neogen",
+    config = true,
+    -- Uncomment next line if you want to follow only stable versions
+    -- version = "*"
   },
   {
     "nvimtools/none-ls.nvim",
@@ -59,7 +63,6 @@ return {
   {
     "neovim/nvim-lspconfig",
     config = function()
-      require("java").setup()
       require "configs.lspconfig"
     end,
   },
@@ -70,7 +73,6 @@ return {
     "williamboman/mason.nvim",
     opts = {
       registries = {
-        'github:nvim-java/mason-registry',
         'github:mason-org/mason-registry',
       },
     },

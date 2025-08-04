@@ -6,6 +6,6 @@ return function(buffnr)
   map("n", "gd", "<cmd>Telescope lsp_definitions<CR>", { desc = "telescope definition", buffer = buffnr })
   map("n", "gtd", "<cmd>Telescope lsp_type_definitions<CR>", { desc = "telescope type definition", buffer = buffnr })
 
-  unmap({ "n", "v" }, "<leader>ca", {buffer = buffnr})
+  -- unmap({ "n", "v" }, "<leader>ca", {buffer = buffnr})
   map({ "n", "v" }, "<leader>c", vim.lsp.buf.code_action, { desc = "Code Actions", buffer = buffnr })
 end

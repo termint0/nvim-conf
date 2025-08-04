@@ -29,6 +29,9 @@ require("lazy").setup({
 dofile(vim.g.base46_cache .. "defaults")
 dofile(vim.g.base46_cache .. "statusline")
 vim.cmd("set rnu!")
+vim.cmd("set foldmethod=indent")
+vim.cmd("set foldlevelstart=99")
+vim.cmd("filetype plugin on")
 
 require "options"
 require "nvchad.autocmds"

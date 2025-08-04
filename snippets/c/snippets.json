@@ -5,5 +5,18 @@
         "$1 * $2 = ($1 *) malloc(sizeof($1));"
       ],
       "description": ["Malloc with cast"]
+    },
+    "comment": {
+        "prefix": ["com"],
+        "body": [
+          "/*",
+          " * description",
+          " * ",
+          " * arg:",
+          " *",
+          " * returns: ",
+          " */"
+      ],
+      "description": ["comment"]
     }
 }

@@ -24,5 +24,10 @@ M.mason = {
     "ruff",
   }
 }
+M.ui = {
+  tabufline = {
+    enabled= false
+  }
+}
 
 return M
